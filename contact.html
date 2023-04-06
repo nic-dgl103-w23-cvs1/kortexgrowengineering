@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/x-icon" href="Sources/images/logo-white-title.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+        /* Navigation bar CSS **************************************************************************************************************** */
+        
+        .navigation-bar {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav {
+            display: flex;
+            position: fixed;
+            background: black;
+            z-index: 2;
+            padding: 0;
+            width: 100%;
+            margin: 0;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0 10px 10px;
+        }
+        
+        .logo {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .logo img {
+            height: 64px;
+            height: 64px;
+            padding-left: 25px;
+        }
+        
+        nav .nav-links {
+            display: flex;
+            justify-content: flex-end;
+            list-style: none;
+            padding-right: 80px;
+        }
+        
+        nav .nav-links li {
+            margin: 0 20px;
+        }
+        
+        nav .nav-links a {
+            font-family: poppins;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+        
+        nav .nav-links li a:hover {
+            color: red;
+            text-transform: uppercase;
+        }
+        /* Current page */
+        
+        nav ul li a.current-page {
+            border-bottom: 4px solid red;
+        }
+        /* Navigation bar CSS Ends************************************************************************************************************* */
+        /* KEEP IN TOUCH CSS ******************************************************************************************* */
+        
+        .keep-in-touch {
+            background-color: white;
+            height: 100%;
+            margin-bottom: 5px;
+        }
+        
+        .keep-in-touch h2 {
+            padding-top: 91px;
+            text-transform: uppercase;
+            font-size: 3.9rem;
+            text-align: center;
+            font-weight: 100;
+            color: black;
+        }
+        /* Keep in touch form */
+        
+        .keep-in-touch-form img {
+            height: 64px;
+            display: block;
+            width: 64px;
+            margin: 0 auto;
+            justify-content: center;
+            padding: 5px 0;
+        }
+        
+        .keep-in-touch-form {
+            display: block;
+            height: 100%;
+            width: 800px;
+            margin: auto;
+        }
+        
+        .keep-in-touch-form input {
+            /* border-top: hidden;
+            border-right: hidden;
+            border-left: hidden; */
+            display: block;
+            border: 2px solid black;
+            margin: 0 auto 0 auto;
+            width: 650px;
+            padding: 30px 0 5px 0;
+            text-transform: uppercase;
+            text-align: center;
+            margin-top: 5px;
+            font-size: 1.3rem;
+        }
+        
+        .keep-in-touch-form textarea {
+            /* border-top: hidden;
+            border-right: hidden;
+            border-left: hidden; */
+            display: block;
+            border: 2px solid black;
+            margin: 5px auto 0 auto;
+            width: 650px;
+            padding: 30px 0 5px 0;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 1.3rem;
+        }
+        
+        .message-sent>img {
+            height: 5%;
+            margin: 25px auto 5px auto;
+            width: 5%;
+        }
+        
+        .message-sent img:hover {
+            scale: 1.075;
+        }
+        /* KEEP IN TOUCH CSS ENDS ************************************************************************************** */
+        /* VISIT US SECTION CSS ************************************************************************************************* */
+        
+        .visit-us {
+            padding-top: 30px;
+            height: 850px;
+            width: 100%;
+            background-color: black;
+        }
+        
+        .visit-us span {
+            color: yellow;
+        }
+        
+        .visit-us h2 {
+            text-align: center;
+            font-weight: 800;
+            color: white;
+            text-transform: uppercase;
+            font-size: 3.9rem;
+        }
+        
+        .visit-us-map {
+            padding-top: 25px;
+        }
+        
+        iframe {
+            width: 80%;
+            margin-left: 10%;
+            margin-right: 10%;
+            height: 450px;
+            border: 3px solid yellow;
+        }
+        /* VISIT US NOW CSS */
+        /*         
+        .visit-us-searchbar {
+            padding: 2% 0 2% 0;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .visit-us-searchbar input {
+            background-color: white;
+            width: 300px;
+            height: 50px;
+            font-family: poppins;
+            text-align: center;
+            border-radius: 25px;
+            margin-right: 8px;
+            border: 3px solid red;
+        }
+        
+        .visit-us-searchbar button {
+            background-color: red;
+            width: 110px;
+            height: 50px;
+            font-family: poppins;
+            text-align: center;
+            color: yellow;
+            border-radius: 25px;
+            font-weight: 900;
+            border: 3px solid yellow;
+            font-size: 1.1rem;
+        }
+        
+        .visit-us-searchbar button:hover {
+            background-color: yellow;
+            width: 110px;
+            height: 50px;
+            font-family: poppins;
+            text-align: center;
+            color: black;
+            border-radius: 25px;
+            font-weight: 900;
+            border: 3px solid red;
+            font-size: 1.3rem;
+        } */
+        /* Address call email Icon CSS */
+        
+        .address-call-mail-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding-left: auto;
+            margin: auto;
+        }
+        
+        .address-call-mail-box {
+            width: 300;
+            height: 130px;
+            text-align: center;
+            padding: 25px;
+            justify-content: space-between;
+        }
+        
+        .address-call-mail-box img {
+            width: 48px;
+            height: 48px;
+        }
+        
+        .address-call-mail-container p {
+            text-transform: uppercase;
+            color: white;
+            font-weight: 900;
+        }
+        /* Quality Control Image Hover Effect */
+        
+        .address-call-mail-box img:hover {
+            -webkit-transform: scale(0.8);
+            -ms-transform: scale(0.8);
+            transform: scale(0.8);
+            transition: 1s ease;
+        }
+        
+        .address-call-mail-box p {
+            max-width: 300px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+        }
+        
+        .address-call-mail-box p:hover {
+            max-width: 300px;
+            color: yellow;
+            text-align: center;
+        }
+        /* VISIT US SECTION CSS ************************************************************************************************* ends*/
+        /* CSS for FAQ***************************************************************************************************************** */
+        
+        .faq-container {
+            /* background-color: #F2F3EB; */
+            background-color: white;
+        }
+        
+        .faq-container h2 {
+            text-align: center;
+            color: black;
+            font-weight: 800;
+            font-size: 3.9rem;
+            width: 100%;
+        }
+        
+        .faq-container h3 {
+            text-align: center;
+            padding: 5px 0 5px 0;
+            color: black;
+        }
+        
+        .faq-container p {
+            text-align: center;
+            padding: 0 0 5px 0;
+            color: black;
+        }
+        
+        .faq-container img {
+            height: 5%;
+            display: block;
+            width: 5%;
+            margin: 0 auto;
+            justify-content: center;
+            padding: 5px 0;
+        }
+        
+        .question-mark {
+            display: inline-block;
+            color: red;
+            animation: flip 2s linear infinite;
+        }
+        
+        @keyframes flip {
+            0% {
+                transform: rotateY(0);
+            }
+            10% {
+                transform: rotateY(36deg);
+            }
+            20% {
+                transform: rotateY(72deg);
+            }
+            30% {
+                transform: rotateY(108deg);
+            }
+            40% {
+                transform: rotateY(144deg);
+            }
+            50% {
+                transform: rotateY(180deg);
+            }
+            60% {
+                transform: rotateY(216deg);
+            }
+            70% {
+                transform: rotateY(252deg);
+            }
+            80% {
+                transform: rotateY(288deg);
+            }
+            90% {
+                transform: rotateY(324deg);
+            }
+            100% {
+                transform: rotateY(360deg);
+            }
+        }
+        /* FAQ Qestion answer CSS */
+        
+        .question-answer-container {
+            text-align: center;
+            align-items: center;
+            text-align: center;
+            display: block;
+            margin: 25px auto 50px auto;
+            width: 800px;
+        }
+        
+        .question-answer-container details {
+            background-color: black;
+        }
+        
+        .question-answer-container summary {
+            padding: 5px;
+            margin-bottom: 6px;
+        }
+        
+        .question-answer-container p {
+            text-align: left;
+            margin-left: 30px;
+            background-color: black;
+            color: white;
+            font-weight: 600;
+            padding-left: 35px;
+            max-width: 700px;
+        }
+        
+        .question-answer-container p span {
+            color: red;
+        }
+        
+        details {
+            background-color: #303030;
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            font-weight: 100;
+        }
+        
+        summary {
+            padding: .5em 1.3rem;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            transition: height 1s ease;
+        }
+        
+        summary::-webkit-details-marker {
+            display: none;
+        }
+        
+        summary:after {
+            content: "\002B";
+        }
+        
+        details[open] summary {
+            margin-bottom: .5em;
+        }
+        
+        details[open] summary:after {
+            content: "\00D7";
+        }
+        
+        details[open] div {
+            padding: .5em 1em;
+        }
+        /* FAQ CSS ENDS***************************************************************************************************************** */
+        /* FOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOTER CSS ************************************************************************************/
+        
+        .footer-container {
+            background-color: black;
+            padding-top: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            width: 100%;
+            position: relative;
+        }
+        
+        .footer-container ul li {
+            display: inline-block;
+        }
+        
+        .footer-container ul li i {
+            color: white;
+        }
+        
+        .footer-container ul li a {
+            text-decoration: none;
+            font-size: 25px;
+            color: white;
+            font-family: Montserrat;
+            font-weight: 750;
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+        
+        .footer-container ul li a:hover {
+            color: yellow;
+        }
+        
+        .footer-mailbox {
+            justify-content: center;
+            padding: 16px 48px;
+        }
+        
+        .footer-mailbox input {
+            border: 0;
+            color: white;
+            text-transform: uppercase;
+            outline: none;
+            margin-right: 7px;
+            border-bottom: 3px solid red;
+            background-color: transparent;
+        }
+        
+        .footer-mailbox button {
+            color: white;
+            text-transform: uppercase;
+            margin-right: 7px;
+            font-weight: 900;
+            padding: 6px;
+            border-radius: 7px;
+            background-color: red;
+        }
+        
+        .footer-mailbox button:hover {
+            color: black;
+            text-transform: uppercase;
+            margin-right: 7px;
+            font-weight: 900;
+            padding: 6px;
+            border-radius: 7px;
+            background-color: yellow;
+            transition: 0.5s;
+        }
+        
+        .copyright {
+            padding: 0;
+            color: white;
+            font-size: 20px;
+            font-weight: 700;
+            text-align: center;
+        }
+        
+        .copyright a {
+            text-decoration: none;
+            align-items: center;
+        }
+    </style>
+    <title>Kortex Grow Engineering | Contact</title>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <section class="navigation-bar">
+        <nav>
+            <a class="logo" href="home.html"><img src="Sources/images/logo-white-title.ico" alt="Kortex Grow Engineering Logo"></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="career.html">Career</a></li>
+                <li><a class="current-page" href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </section>
+    <!-- Keep in Touch section -->
+    <section class="keep-in-touch">
+        <h2>
+            &bull; Keep in touch &bull;
+        </h2>
+        <section class="keep-in-touch-form">
+            <img src="Sources/images/old-letter.png" alt="Old Letter Image">
+
+            <input type="name" placeholder="name">
+            <input type="email" placeholder="email">
+            <textarea name="typer here" placeholder="Tell us about yourself!" cols="30" rows="10"></textarea>
+            <a class="message-sent" href="#"><img src="Sources/images/sent.png" alt="Message Send"></a>
+        </section>
+    </section>
+    <!-- Visit Us and Google Map -->
+    <section class="visit-us">
+
+        <h2>Visit <span>Us</span> Now</h2>
+        <!-- <section class="address-call-mail">
+            <section class="adress-call-mail-box">
+                <img src="Sources/images/old-phone-white.png" alt="Address Icon">
+                <p>+91 987,654(GROW)</p>
+            </section>
+            <section class="adress-call-mail-box"><img src="Sources/images/location-address-white.png" alt="Phone Icon">
+                <p>C-1/39, GIDC, Kalol, Gujarat 382725, India</p>
+            </section>
+            <section class="adress-call-mail-box">
+                <img src="Sources/images/emailaddress-white.png" alt="Email Icon">
+                <p>sendemail@kortex.com</p>
+            </section>
+        </section> -->
+        <!-- SEARCH BOX [[][][[][][][][][]]] -->
+        <!-- <section class="visit-us-searchbar">
+                <input id="searchbox" type="text" placeholder="How can we help you?">
+                <button id="button" type="submit">Search</button>
+            </section> -->
+        <section class="address-call-mail">
+            <section class="address-call-mail-container">
+                <section class="address-call-mail-box">
+                    <img src="Sources/images/old-phone-white.png" alt="Analysis">
+                    <p>+91 987-654-(GROW)</p>
+                </section>
+                <section class="address-call-mail-box">
+                    <img src="Sources/images/location-address-white.png" alt="Analysis">
+                    <p>C-1/39, GIDC, Kalol, Gujarat 382725, India </p>
+                </section>
+                <section class="address-call-mail-box">
+                    <img src="Sources/images/emailaddress-white.png" alt="Analysis">
+                    <p>sendemail@kortex.com</p>
+                </section>
+            </section>
+        </section>
+        <section class="visit-us-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14665.457529560834!2d72.5094488!3d23.2298238!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395c26056857c1e1%3A0xc0357c2199cfbb67!2sKORTEX%20GROW%20ENGINEERS!5e0!3m2!1sen!2sca!4v1676474479335!5m2!1sen!2sca"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+        <section class=""></section>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-container">
+        <h2>FAQ<span class="question-mark">&nbsp;?</span></h2>
+        <img src="Sources/images/faq.png" alt="FAQ Icon">
+        <section class="question-answer-container">
+            <!-- Question in H3 -->
+            <details class="faq-detail">
+                <summary class="faq-question">What is our address, when are we open, and how do I make an appointment? </summary>
+
+                <p class="faq-answer">Our address is: <span>C-1/39, GIDC, Kalol, Gujarat 382725, India.</span> We are a business that is open 24 hours a day; to schedule an appointment, please call <span> +91 987-654-GROW</span> or send an email to <span>sendemail@kortex.com.</span></p>
+            </details>
+            <details class="faq-detail">
+                <summary class="faq-question">What products do we manufacture, and what is our production capacity? </summary>
+
+                <p class="faq-answer">Our production range and capacity have increased due to our constant attempts at building modern technical solutions for industry, as we now have <span> in-house 12-metric-ton cranes.</span> Also, our <span> 120-person team </span>has
+                    the ability to reach up to <span> 5 CUR*</span>.
+                </p>
+            </details>
+            <details class="faq-detail">
+                <summary class="faq-question">How is Kortex Groww Eng different from others? </summary>
+
+                <p class="faq-answer">Unlike traditional methods, Kortex relies on technology to monitor and optimize growth. It uses <span> sensors, data analysis, and other tools</span> to create a precise and efficient growing environment.
+                </p>
+            </details>
+            <!-- <details class="faq-detail">
+                <summary class="faq-question">Lorem, ipsum dolor. </summary>
+
+                <p class="faq-answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, ducimus?</p>
+            </details>
+            <details class="faq-detail">
+                <summary class="faq-question">Lorem, ipsum dolor. </summary>
+
+                <p class="faq-answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, ducimus?</p>
+            </details> -->
+        </section>
+    </section>
+</body>
+<footer>
+    <section class="footer-container">
+        <ul>
+            <li>
+                <!-- <i class="fa fa-facebook fa-2x"></i> -->
+                <a href="https://www.facebook.com/" target="_blank">FACEBOOK</a>
+            </li>
+            <li>
+                <!-- <i class="fa fa-twitter fa-2x"></i> -->
+                <a href="https://twitter.com/" target="_blank">TWITTER</a>
+            </li>
+            <li>
+                <!-- <i class="fa fa-instagram fa-2x"></i> -->
+                <a href="https://www.instagram.com/" target="_blank">INSTAGRAM</a>
+            </li>
+            <li>
+                <!-- <i class="fa fa-youtube-play fa-2x"></i> -->
+                <a href="https://www.youtube.com/" target="_blank">YOUTUBE</a>
+            </li>
+            <li>
+                <!-- <i class="fa fa-linkedin fa-2x"></i> -->
+                <a href="https://www.linkedin.com/" target="_blank">LINKEDIN</a>
+            </li>
+        </ul>
+
+        <section class="footer-mailbox">
+            <input type="email" placeholder="Type your Email">
+            <button value="Subscribe">Subscribe</button>
+        </section>
+        <!-- <hr class="footer-hr"> -->
+
+        <section class="copyright">
+            Copyright &#169; 2023<a href="#">&nbsp;	Privacy Policy.</a>
+        </section>
+
+    </section>
+
+</footer>
+
+</html>

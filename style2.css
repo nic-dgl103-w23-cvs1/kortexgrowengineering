@@ -1,0 +1,565 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+
+/* Nav CSS  */
+
+nav {
+    display: flex;
+    position: fixed;
+    background-color: black;
+    /* background-color: transparent; */
+    z-index: 2;
+    /* backdrop-filter: blur(50px); */
+    padding: 0;
+    width: 100%;
+    margin: 0;
+    /* justify-content: space-between; */
+    align-items: center;
+    padding: 10px 0 10px 10px;
+}
+
+.logo {
+    padding: 0;
+    margin: 0;
+}
+
+.logo img {
+    height: 64px;
+    height: 64px;
+    padding-left: 25px;
+}
+
+nav .nav-links {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    padding-right: 80px;
+}
+
+.nav-links {
+    padding-left: 780px;
+}
+
+nav .nav-links li {
+    margin: 0 20px;
+}
+
+nav .nav-links a {
+    font-family: Montserrat;
+    color: white;
+    /* mix-blend-mode: luminosity; */
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+nav .nav-links li a:hover {
+    color: red;
+    text-transform: uppercase;
+}
+
+.name-after-logo {
+    display: flex;
+    padding-left: 6px;
+    padding-bottom: 2px;
+    line-height: 0.9;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    max-width: 25px;
+    text-align: left;
+}
+
+
+/* Current page */
+
+nav ul li a.current-page {
+    border-bottom: 4px solid red;
+}
+
+
+/* Nav CSS Ends */
+
+.vid {
+    height: 750px;
+    width: 100%;
+    position: relative;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    /* filter: brightness(20%) contrast(70%); */
+}
+
+h1 {
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+    font-weight: 900;
+    padding-top: 200px;
+    font-size: 3.9rem;
+    position: relative;
+    z-index: 1;
+    text-shadow: 5px 5px 5px rgba(255, 255, 255, 0.4);
+    /* filter: blur(2px); */
+}
+
+
+/* h1:hover {
+    filter: blur(0px);
+} */
+
+.visit-us-searchbar {
+    display: flex;
+    justify-content: center;
+    padding-top: 35px;
+}
+
+.visit-us-searchbar input {
+    background-color: transparent;
+    width: 300px;
+    height: 50px;
+    font-family: Montserrat;
+    text-align: center;
+    margin-right: 8px;
+    border-bottom: 3px solid red;
+    border-right: none;
+    border-left: none;
+    color: white;
+    text-transform: uppercase;
+    /* filter: blur(2px); */
+    border-top: none;
+    outline: none;
+}
+
+.visit-us-searchbar input:hover {
+    filter: blur(0px);
+}
+
+.visit-us-searchbar button {
+    background-color: transparent;
+    width: 110px;
+    height: 50px;
+    font-family: Montserrat;
+    filter: blur(2px);
+    text-align: center;
+    color: red;
+    font-weight: 900;
+    border: 3px solid red;
+    font-size: 1.1rem;
+    border-radius: 7px;
+}
+
+.visit-us-searchbar button:hover {
+    background-color: red;
+    width: 110px;
+    filter: blur(0px);
+    height: 50px;
+    font-family: Montserrat;
+    text-align: center;
+    color: white;
+    font-weight: 900;
+    font-size: 1.3rem;
+    transition: background-color 0.5s ease;
+}
+
+.content {
+    display: flex;
+    width: 100%;
+    margin-top: 75px;
+    justify-content: space-between;
+    max-width: 75%;
+    margin: 50px auto;
+}
+
+.first-container,
+.second-container,
+.third-container,
+.fourth-container {
+    background-color: #1e1a33;
+    border-radius: 7px;
+    width: 200px;
+    height: 120px;
+    z-index: -1;
+    padding: 15px 0 0 0;
+    text-align: center;
+}
+
+.first-container img,
+.second-container img,
+.third-container img,
+.fourth-container img {
+    width: 64px;
+    height: 64px;
+    display: block;
+    margin-left: 68px;
+    z-index: 1;
+}
+
+.first-container h2,
+.second-container h2,
+.third-container h2,
+.fourth-container h2 {
+    color: white;
+    z-index: 1;
+    text-transform: uppercase;
+}
+
+
+/* MOUSE CSS */
+
+.mouse-scroll {
+    text-align: center;
+    margin-top: 185px;
+    filter: blur(1px);
+}
+
+.mouse {
+    width: 20px;
+    height: 35px;
+    border: 3px solid white;
+    border-radius: 25px;
+    position: relative;
+    display: inline-block;
+    background-color: black;
+}
+
+.wheel {
+    width: 4px;
+    height: 4px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 9px;
+    left: 8px;
+    animation: scroll-wheel 2s infinite;
+}
+
+@keyframes scroll-wheel {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(9px);
+    }
+}
+
+
+/*  More about company CSS*/
+
+.text-content {
+    padding-top: 50px;
+    height: 800px;
+    display: block;
+    background-color: black;
+    color: white;
+}
+
+.text-content h2 {
+    text-transform: uppercase;
+    font-weight: 100;
+    display: block;
+    padding-bottom: 45px;
+    text-align: center;
+    font-size: 3.9rem;
+}
+
+.image-and-text {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.image {
+    width: 50%;
+    height: auto;
+}
+
+.image img {
+    padding: 45px 105px;
+    transition: transform 0.3s ease-in-out;
+    margin-left: 70px;
+    box-shadow: 0 0 25px black;
+    filter: blur(2px);
+}
+
+.image img:hover {
+    transform: translate(10px, -10px);
+    filter: blur(0px);
+}
+
+.text {
+    width: 50%;
+}
+
+.text h3 {
+    text-transform: uppercase;
+    font-weight: 550;
+    font-size: 1.8rem;
+    text-align: center;
+    padding-bottom: 35px;
+}
+
+.text p {
+    padding: 0 85px;
+    text-align: justify;
+}
+
+.awards {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.all-awards {
+    margin-left: 120px;
+}
+
+.awards {
+    display: inline-block;
+    margin: 50px 25px 0 0;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 0, 0.444);
+}
+
+.awards img {
+    margin: 16px 0 0 16px;
+    height: 48px;
+    width: 48px;
+}
+
+.awards:hover {
+    background-color: white;
+}
+
+.awards img:hover {
+    scale: 1.2;
+}
+
+
+/* List Style */
+
+.list {
+    margin: 50px 100px;
+}
+
+.list h5 {
+    text-transform: uppercase;
+    font-weight: 1000;
+    font-size: 1.2rem;
+}
+
+.check-list {
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+.check-list li {
+    position: relative;
+    list-style-type: none;
+    font-size: 1.2rem;
+    padding-left: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.check-list li:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -2px;
+    width: 5px;
+    height: 11px;
+    border-width: 0 2px 2px 0;
+    border-style: solid;
+    border-color: #00a8a8;
+    transform-origin: bottom left;
+    transform: rotate(45deg);
+}
+
+.check-list li a {
+    text-decoration: none;
+    color: green;
+    font-weight: bolder;
+}
+
+
+/* Our clients CSS */
+
+.our-client {
+    width: 100%;
+    height: 1200px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.our-client h2 {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 3.9rem;
+    padding: 15px;
+}
+
+.our-client p {
+    font-weight: 100;
+}
+
+
+/* Our clients CSS Ends */
+
+.clients {
+    display: block;
+}
+
+
+/* Testimonial Section CSS */
+
+.testimonials {
+    width: 100%;
+    height: 1000px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.testimonials h2 {
+    text-transform: uppercase;
+    padding: 55px;
+    font-weight: 500;
+    font-size: 2.6rem;
+}
+
+.testimonials h3 {
+    text-transform: uppercase;
+    padding: 15px;
+    font-weight: 900;
+    font-size: 1.3rem;
+}
+
+.testimonials span {
+    color: red;
+}
+
+.testimonials-box {
+    display: block;
+    border: 2px solid white;
+    margin: 3px;
+    margin-left: 30%;
+    max-width: 500px;
+    border-radius: 7px;
+    padding: 50px;
+}
+
+
+/* Testimonial Section CSS ends*/
+
+
+/* FO0TER CSS */
+
+footer {
+    background-color: black;
+    text-align: center;
+}
+
+.footer-container {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    padding: 30px 48px 16px;
+}
+
+.footer-container ul li {
+    display: inline-block;
+}
+
+.footer-container ul li i {
+    color: white;
+}
+
+.footer-container ul li a {
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    font-family: Montserrat;
+    font-weight: 750;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.footer-container ul li a:hover {
+    color: yellow;
+}
+
+.footer-mailbox {
+    justify-content: center;
+    padding: 16px 48px;
+}
+
+.footer-mailbox input {
+    border: 0;
+    color: white;
+    text-transform: uppercase;
+    outline: none;
+    margin-right: 7px;
+    border-bottom: 3px solid red;
+    background-color: transparent;
+}
+
+.footer-mailbox button {
+    color: white;
+    text-transform: uppercase;
+    margin-right: 7px;
+    font-weight: 900;
+    padding: 6px;
+    border-radius: 7px;
+    background-color: red;
+}
+
+.footer-mailbox button:hover {
+    color: black;
+    text-transform: uppercase;
+    margin-right: 7px;
+    font-weight: 900;
+    padding: 6px;
+    border-radius: 7px;
+    background-color: yellow;
+    transition: 0.5s;
+}
+
+.copyright {
+    padding: 0;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.copyright a {
+    text-decoration: none;
+    align-items: center;
+}
+
+
+/* Footer CSS ends */

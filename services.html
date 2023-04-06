@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="icon" type="image/x-icon" href="Sources/images/logo-white-title.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>Kortex Grow Engineering | Services</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+        /* Navbar  Section CSS ************************************************************************************8 */
+        
+        .navigation-bar {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav {
+            display: flex;
+            position: fixed;
+            background: black;
+            z-index: 2;
+            padding: 0;
+            width: 100%;
+            margin: 0;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0 10px 10px;
+        }
+        
+        .logo {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .logo img {
+            height: 64px;
+            height: 64px;
+            padding-left: 25px;
+        }
+        
+        nav .nav-links {
+            display: flex;
+            justify-content: flex-end;
+            list-style: none;
+            padding-right: 80px;
+        }
+        
+        nav .nav-links li {
+            margin: 0 20px;
+        }
+        
+        nav .nav-links a {
+            font-family: Montserrat;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+        
+        nav .nav-links li a:hover {
+            color: red;
+            text-transform: uppercase;
+        }
+        /* Current page */
+        
+        nav ul li a.current-page {
+            border-bottom: 4px solid red;
+        }
+        /*Nav  Responsiveness  */
+        
+        @media screen and (max-width: 992px) {
+            .logo img {
+                height: 48px;
+                padding-left: 20px;
+            }
+        }
+        /* Media query for screens smaller than 768px */
+        
+        @media screen and (max-width: 768px) {
+            .logo img {
+                height: 32px;
+                padding-left: 15px;
+            }
+        }
+        /* Navbar  Section CSS ************************************************************************************ ENDS */
+        /*  Hero Section CSS ******************************************************************************************************************/
+        
+        .hero-main-services {
+            height: 100%;
+            background-color: black;
+            /* background-image: url(sources/images/services.jpg); */
+            background-size: cover;
+            position: relative;
+            width: 100%;
+            padding-top: 91px;
+        }
+        
+        .name-span {
+            color: white;
+            font-weight: bold;
+        }
+        /* Line outwards CSS ******************************************************************/
+        
+        .line-container {
+            width: 100%;
+            text-align: center;
+        }
+        
+        .line {
+            display: inline-block;
+            position: relative;
+            height: 2px;
+            width: 0;
+            background-color: RED;
+        }
+        
+        .line::before,
+        .line::after {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 2px;
+            background-color: RED;
+            top: 0;
+        }
+        
+        .line::before {
+            left: -10px;
+        }
+        
+        .line::after {
+            right: -10px;
+        }
+        
+        @keyframes spread {
+            from {
+                width: 0;
+            }
+            to {
+                width: 50%;
+            }
+        }
+        
+        .line {
+            animation-name: spread;
+            animation-duration: 8s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+        }
+        /***************************************************************** Line outwords ends */
+        
+        .hero-main-services h2 {
+            padding: 35px 0 0 0;
+            text-align: center;
+            align-items: center;
+            color: white;
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 3.9rem;
+            z-index: 1;
+        }
+        
+        .hero-main-services p {
+            z-index: 1;
+            text-align: justify;
+            padding: 50px 150px 50px 150px;
+            font-size: 22px;
+            color: white;
+        }
+        /* Tool Slider CSS ********************************************************************************** */
+        /*  Hero Section CSS Ends******************************************************************************************************************/
+        
+        .section-heading {
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 60px;
+        }
+        
+        .production-image {
+            height: 96px;
+            width: 96px;
+            border-radius: 50%;
+            border: 4px solid #C2F90C;
+        }
+        
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .column {
+            width: 100%;
+            padding: 0 1em 1em 1em;
+            text-align: center;
+        }
+        
+        .card {
+            width: 100%;
+            height: 100%;
+            padding: 2em 1.5em;
+            background: linear-gradient(#ffffff 50%, black 50%);
+            background-size: 100% 200%;
+            background-position: 0 2.5%;
+            border-radius: 5px;
+            box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        
+        h3 {
+            text-transform: uppercase;
+            font-size: 20px;
+            font-weight: 700;
+            margin: 1em 0;
+        }
+        
+        p {
+            font-size: 15px;
+            line-height: 1.6;
+            letter-spacing: 0.03em;
+        }
+        
+        .icon-wrapper {
+            position: relative;
+            margin: auto;
+            font-size: 30px;
+            height: 2.5em;
+            width: 2.5em;
+            color: #ffffff;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            transition: 0.5s;
+        }
+        
+        .card:hover {
+            background-position: 0 100%;
+        }
+        
+        .card:hover .icon-wrapper {
+            background-color: white;
+            color: #5A20C2;
+        }
+        
+        .card:hover h3 {
+            color: #ffffff;
+        }
+        
+        .card:hover p {
+            color: #f0f0f0;
+        }
+        
+        @media screen and (min-width: 768px) {
+            section {
+                padding: 0 2em;
+            }
+            .column {
+                flex: 0 50%;
+                max-width: 50%;
+            }
+        }
+        
+        @media screen and (min-width: 992px) {
+            section {
+                padding: 1em 3em;
+            }
+            .column {
+                flex: 0 0 33.33%;
+                max-width: 33.33%;
+            }
+        }
+        /* Research and Development CSS */
+        
+        .research-and-development-section {
+            background-color: black;
+            height: 300px;
+            display: block;
+            padding: auto;
+            padding: 40px 0;
+        }
+        
+        .research-and-development-section h2 {
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            text-align: center;
+            text-transform: uppercase;
+            color: white;
+            font-size: 3.9rem;
+            font-weight: 800;
+        }
+        
+        .research-and-development-section p {
+            text-transform: uppercase;
+            margin: 10px;
+            margin-top: 0;
+            color: white;
+            text-align: center;
+        }
+        
+        .rdbuttons button {
+            width: 150px;
+            height: 55px;
+            background-color: transparent;
+            border: 3px solid white;
+            color: white;
+            text-transform: uppercase;
+            border-radius: 7px;
+            font-size: 1.1rem;
+            font-weight: 900;
+            margin: 10px;
+        }
+        
+        .rdbuttons button:hover {
+            width: 150px;
+            height: 55px;
+            transition: ease-out 0.5s;
+            background-color: white;
+            border: 3px solid black;
+            color: black;
+            text-transform: uppercase;
+            border-radius: 7px;
+            transition: 0.3s;
+            font-size: 1.1rem;
+            font-weight: 900;
+            margin: 10px;
+        }
+        
+        .rdbuttons {
+            text-align: center;
+        }
+        /*Quality Control CSS ************************************************************************************ */
+        
+        .quality-control h2 {
+            font-weight: 800;
+            font-size: 60px;
+            text-transform: uppercase;
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 70px;
+        }
+        
+        .quality-control-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            padding-left: 200px;
+        }
+        
+        .quality-control-box {
+            width: 300;
+            height: 400px;
+            text-align: center;
+        }
+        
+        .quality-control-box img {
+            width: 96px;
+            height: 96px;
+        }
+        /* Quality Control Image Hover Effect */
+        
+        .quality-control-box img:hover {
+            -webkit-transform: scale(0.8);
+            -ms-transform: scale(0.8);
+            transform: scale(0.8);
+            transition: 1s ease;
+        }
+        
+        .quality-control-box p {
+            max-width: 300px;
+            text-align: center;
+        }
+        /* Responsive CSS for Quality Control 992px Screen*/
+        
+        @media only screen and (max-width: 992px) {
+            .quality-control h2 {
+                font-weight: 600;
+                font-size: 40px;
+                text-transform: uppercase;
+                text-align: center;
+                padding-top: 20px;
+                padding-bottom: 70px;
+            }
+        }
+        
+        .quality-control-container {
+            padding-left: 100px;
+        }
+        /* Responsive css for Quality contro; 768px screen */
+        
+        @media only screen and (max-width: 768px) {
+            .quality-control h2 {
+                font-weight: 400;
+                font-size: 20px;
+                text-transform: uppercase;
+                text-align: center;
+                padding-top: 20px;
+                padding-bottom: 70px;
+            }
+        }
+        
+        .quality-control-container {
+            padding-left: 100px;
+        }
+        /* FOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOTER CSS ************************************************************************************/
+        
+        .footer-container {
+            background-color: black;
+            padding-top: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            width: 100%;
+            position: relative;
+        }
+        
+        .footer-container ul li {
+            display: inline-block;
+        }
+        
+        .footer-container ul li i {
+            color: white;
+        }
+        
+        .footer-container ul li a {
+            text-decoration: none;
+            font-size: 25px;
+            color: white;
+            font-family: Montserrat;
+            font-weight: 750;
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+        
+        .footer-container ul li a:hover {
+            color: yellow;
+        }
+        
+        .footer-mailbox {
+            justify-content: center;
+        }
+        
+        .footer-mailbox input {
+            border: 0;
+            color: white;
+            text-transform: uppercase;
+            outline: none;
+            margin-right: 7px;
+            border-bottom: 3px solid red;
+            background-color: transparent;
+        }
+        
+        .footer-mailbox button {
+            color: white;
+            text-transform: uppercase;
+            margin-right: 7px;
+            font-weight: 900;
+            padding: 6px;
+            border-radius: 7px;
+            background-color: red;
+        }
+        
+        .footer-mailbox button:hover {
+            color: black;
+            text-transform: uppercase;
+            margin-right: 7px;
+            font-weight: 900;
+            padding: 6px;
+            border-radius: 7px;
+            background-color: yellow;
+            transition: 0.5s;
+        }
+        
+        .copyright {
+            padding: 0;
+            color: white;
+            font-size: 20px;
+            font-weight: 700;
+            text-align: center;
+        }
+        
+        .copyright a {
+            text-decoration: none;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <section class="navigation-bar">
+        <nav>
+            <a class="logo" href="index.html"><img src="Sources/images/logo-white-title.ico" alt="Kortex Grow Engineering Logo"></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a class="current-page" href="services.html">Services</a></li>
+                <li><a href="career.html">Career</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </section>
+    <!-- Main Hero Services -->
+    <section class="hero-main-services">
+        <h2>Services</h2>
+        <div class="line-container">
+            <div class="line"></div>
+        </div>
+
+        <p><span class="name-span">Kortex Grow Engineering</span> has a specializes in the manufacture of top-quality CNC products and Lathe machine products. Our state-of-the-art CNC products are designed to meet the highest standards of precision, accuracy
+            and reliability. These products are ideal for a wide range of industrial and commercial applications, including metalworking, woodworking, and plastic machining. Our Lathe machine products are renowned for their durability and versatility,
+            and are highly sought after by machine shops, tool and die makers, and manufacturing facilities around the world. With a focus on innovation, we constantly strive to enhance our products, and are dedicated to providing our customers with the
+            best possible solutions to meet their needs.
+        </p>
+
+    </section>
+    <!-- Our Prodcution Services  -->
+
+    <section>
+        <h2 class="section-heading">Production Services</h2>
+        <section class="row">
+            <!-- Our Services > CNC Machine  -->
+            <section class="column">
+
+                <section class="card">
+                    <img class="production-image" src="Sources/images/cnc-products.jpg" alt="CNC Machine Prodcuts">
+                    <h3>CNC Machine</h3>
+                    <p>
+                        We have three dynamic CNC machines, each with eight robotic arms, that can act as a router, drill press, jigsaw, table saw, jointer, or even a surface planer.
+                    </p>
+                </section>
+
+            </section>
+            <!-- Our Services > Lathe Machine  -->
+            <section class="column">
+
+                <section class="card">
+                    <img class="production-image" src="Sources/images/lathe-machine-products.jpg" alt="Lathe Machine Prodcuts">
+                    <h3>Lathe Machine</h3>
+                    <p>
+                        Kortex has six semi-automatic lathe machines for woodturning, metalworking, metal spinning, thermal spraying, parts reclamation, and glass-working.
+                    </p>
+                </section>
+
+            </section>
+            <!-- Our Services > Welding Machine -->
+            <section class="column">
+
+                <section class="card">
+                    <img class="production-image" src="Sources/images/welding-products.jpg" alt="Welding Machine">
+                    <h3>Welding Machine</h3>
+                    <p>
+                        The team of experts at Kortex has vast experience in six different methods of welding, including SMAW, GTAW, GMAW, FCAW, SAW, ESW, PAW, and Resistance Welding.
+                    </p>
+                </section>
+
+            </section>
+            <!-- Our Services > Laser Cutting -->
+            <section class="column">
+
+                <section class="card">
+                    <img class="production-image" src="Sources/images/lasercutting.jpg" alt="Laser Cutting Prodcuts">
+                    <h3>Laser Cutting</h3>
+                    <p>
+                        Having all three types of laser, CO2 , Fiber lasers, and YAG cutters allows us to fullfil major requirements of our clints and saves a considerable amount of time.
+                    </p>
+                </section>
+
+            </section>
+            <!-- Our Services > Grinder Machine -->
+            <section class="column">
+
+                <section class="card">
+                    <img class="production-image" src="Sources/images/grinder-machine.jpg" alt="Grinder Machine Prodcuts">
+                    <h3>Grinder Machine</h3>
+                    <p>
+                        Kortex is the only company having Sand Grinder in local area providing Finishing of metal components in the manufacturing of machines and tools.
+                    </p>
+                </section>
+
+            </section>
+            <!-- Our Services > Planer Machine -->
+            <section class="column">
+
+                <section class="card">
+                    <img class="production-image" src="Sources/images/planer-machine.jpg" alt="Planner Machine Prodcuts">
+                    <h3>Planer Machine</h3>
+                    <p>
+                        Having three 4 Ton Matel Planning machine is our major production area, having more than 8000 clients all over the India.
+                    </p>
+                </section>
+
+            </section>
+        </section>
+
+    </section>
+    <!-- Research and Development Section -->
+    <section class="research-and-development-section">
+        <h2>Research &amp; Development</h2>
+        <p>Kortex boasts a highly skilled team of industrial design and engineering experts with extensive experience in their respective fields. </p>
+        <section class="rdbuttons">
+            <button type="submit" value="Design">Design</button>
+            <button type="submit" value="Engineering">Engineering</button>
+        </section>
+    </section>
+    <!-- Quality Control Section -->
+    <section class="quality-control">
+
+        <h2>Quality Control</h2>
+
+        <section class="quality-control-container">
+            <section class="quality-control-box">
+                <img src="Sources/images/analysis.png" alt="Analysis">
+                <h3>Analysis</h3>
+                <p>Our proficient team is devoted to scrutinizing data in order to minimize the chances of workplace accidents and errors in job performance. </p>
+            </section>
+            <section class="quality-control-box">
+                <img src="Sources/images/safety.png" alt="Analysis">
+                <h3>Safety</h3>
+                <p>Ensuring employee well-being through safety measures has reduced accident costs and boosting productivity. </p>
+            </section>
+            <section class="quality-control-box">
+                <img src="Sources/images/documentation.png" alt="Analysis">
+                <h3>Documentation</h3>
+                <p>Kortex Grow has implemented an efficient documentation system as it facilitates information management, process optimization, and compliance with legal and regulatory requirements.</p>
+            </section>
+            <section class="quality-control-box">
+                <img src="Sources/images/employee.png" alt="Analysis">
+                <h3>Employee Training</h3>
+                <p>We have developed employee training that helps a company improve job performance, increase productivity, reduce errors and accidents, boost employee morale and satisfaction, and stay competitive in the industry. </p>
+            </section>
+            <section class="quality-control-box">
+                <img src="Sources/images/feedback.png" alt="Analysis">
+                <h3>Environment Assessment</h3>
+                <p>Policies, such as environmental assessment, help a company identify potential environmental risks and impacts, comply with regulations, reduce operational costs, and improve sustainability practices.
+                </p>
+            </section>
+            <section class="quality-control-box">
+                <img src="Sources/images/improvment.png" alt="Analysis">
+                <h3>Quick Actions</h3>
+                <p>At Kortex Grow, we belive in <em>kaizen</em> and do not underestimate safety Assurance its importance.
+                </p>
+            </section>
+
+            <section class="quality-control-box">
+                <img src="Sources/images/standard.png" alt="Analysis">
+                <h3>Standards</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, neque.</p>
+            </section>
+            <section class="quality-control-box">
+                <img src="Sources/images/biohazard.png" alt="Analysis">
+                <h3>Biohazard</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, consequatur.</p>
+            </section>
+            <section class="quality-control-box">
+                <img src="Sources/images/diamond.png" alt="Analysis">
+                <h3>Superior Quality</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, consequatur.</p>
+            </section>
+
+        </section>
+
+    </section>
+
+
+
+</body>
+<footer>
+    <section class="footer-container">
+        <ul>
+            <li>
+                <!-- <i class="fa fa-facebook fa-2x"></i> -->
+                <a href="https://www.facebook.com/" target="_blank">FACEBOOK</a>
+            </li>
+            <li>
+                <!-- <i class="fa fa-twitter fa-2x"></i> -->
+                <a href="https://twitter.com/" target="_blank">TWITTER</a>
+            </li>
+            <li>
+                <!-- <i class="fa fa-instagram fa-2x"></i> -->
+                <a href="https://www.instagram.com/" target="_blank">INSTAGRAM</a>
+            </li>
+            <li>
+                <!-- <i class="fa fa-youtube-play fa-2x"></i> -->
+                <a href="https://www.youtube.com/" target="_blank">YOUTUBE</a>
+            </li>
+            <li>
+                <!-- <i class="fa fa-linkedin fa-2x"></i> -->
+                <a href="https://www.linkedin.com/" target="_blank">LINKEDIN</a>
+            </li>
+        </ul>
+
+        <section class="footer-mailbox">
+            <input type="email" placeholder="Type your Email">
+            <button value="Subscribe">Subscribe</button>
+        </section>
+        <!-- <hr class="footer-hr"> -->
+
+        <section class="copyright">
+            Copyright &#169; 2023<a href="#">&nbsp;	Privacy Policy.</a>
+        </section>
+
+    </section>
+
+</footer>
+
+
+</html>
